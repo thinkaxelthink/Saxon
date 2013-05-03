@@ -180,6 +180,9 @@ button.create:hover {
 		.mouse dl dd {
 			font-family: 'Quicksand', sans-serif;
 			text-align: right;
+			margin: 0 0 0 110px;
+			min-width: 110px;
+			min-height: 20px;
 		}
 		.edit {display: none;}
 		.editing label {

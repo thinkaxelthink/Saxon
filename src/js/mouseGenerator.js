@@ -231,7 +231,10 @@ function onJsonPluginLoaded ( r , Events , JsonLoader, NumberUtils ) {
 			randomMouse.cloak_color = 'green';
 
 
-
+			// This must be done last we will error if we do checks and these are missing
+			randomMouse.rank = _.pick( randomMouse.rank , 'title' ).title;
+			randomMouse.hometown = _.pick( randomMouse.hometown , 'name' ).name;
+			randomMouse = _.omit( randomMouse , ['restrict_traits','restrict_skill'] );
 			log('nature mod',randomMouse);
 
 			return randomMouse;

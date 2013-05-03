@@ -24,8 +24,8 @@
 
 {% block header %}
 <header>
-		<h1>Mouse Guard</h1>
-		<h4>Character Generator</h4>
+		<h1>Saxon</h1>
+		<h4>A Mouse Guard Character Generator</h4>
 </header>
 {% end %}
 
@@ -44,21 +44,43 @@
 {% block last_load %}
 <script type="text/template" id="mouse-item-template">
 	<header>
-		<strong><%- rank.title %></strong>
-		<em><%- name %>, <%- age %> From <%- hometown.name %></em>
+		<strong><%- rank %></strong>
+		<em><%- name %>, <%- age %> From <%- hometown %></em>
 	</header>
 	<img src="/static/img/mouse1.png" title="<%- name %>">
 	<dl>
 	<% for (var item in this.model.attributes){ %>
-			<% if (typeof this.model.attributes !== 'Object' ) { %>
-				<dt><strong><% item %>:</strong></dt>
+			<% if( item === 'traits' || item === 'nature' || item === 'belief' ) { %>
+	</dl><dl>
+			<% } %>
+			<% if ( _.isArray( this.model.attributes[item] ) === true ) { %>
+				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
+				<% _.each(this.model.attributes[item], function(e){ %>
+					<dd class="view">
+						<label><%= e %></label>
+						<input class="edit" type="text" value="<%- e %>">
+					</dd>
+				<% }); %>
+			<% } else if ( _.isObject( this.model.attributes[item] ) === true ) { %>
+				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
+				<% _.each(_.pairs(this.model.attributes[item]), function(e){ %>
+					<dd class="view">
+						<label><%= e[0] %>  <%= e[1] %></label>
+						<input class="edit" type="text" value="<%- e[1] %>">
+					</dd>
+				<% }); %>
+			<% }else{ %>
+				<% if( item !== 'id' && item !== 'hometown' 
+					&& item !== 'rank'&& item !== 'age' ) { %>
+				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
 				<dd class="view">
 					<label><%- this.model.attributes[item] %></label>
 					<input class="edit" type="text" value="<%- this.model.attributes[item] %>">
 				</dd>
-			<% }else{ %>
-			<% }%>
+				<% } %>
+			<% } %>
 	<% } %>
+	</dl>
 </script>
 <script type="text/template" id="stats-template">
 	// <div class="mice-count"><b><%= remaining %></b> <%= remaining == 1 ? 'mouse' : 'mice' %> created</div>

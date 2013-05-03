@@ -1,5 +1,15 @@
 define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], function ($, Events, MouseGen) {
-	
+	// MIXINS -> move this to somewhere better
+		_.mixin({
+			capitalize : function(string) {
+				return string.charAt(0).toUpperCase() + string.substring(1).toLowerCase();
+			},
+			spacelize: function (s) {
+				return s.replace(/_/g, ' ');
+			}
+		});
+
+
 		var Mouse = Backbone.Model.extend({
 			defaults: function() {
 				return {
@@ -105,5 +115,7 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 
 		var App = new AppView;
 		// log('m', Mice, App);
+
+
 
 });
