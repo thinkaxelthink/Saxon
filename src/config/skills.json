@@ -1,0 +1,9 @@
+{
+	"base_rating": 0,
+	"rating_max": 6,
+	"hometown_skill": 1,
+	"trades":["administrator","apiarist","archivist","armorer","baker","boatcrafter","brewer","carpenter","cartographer","cook","deceiver","fighter","glazier","haggler","harvester","healer","hunter","insectrist","instructor","laborer","loremouse","militarist","miller","ondatratian","orator","pathfinder","persuader","potter","scientist","scout","smith","stonemason","survivalist","weather watcher","weaver"],
+	"extra_trade": ["apiarist","archivist","armorer","baker","boatcrafter","brewer","carpenter","cartographer","glazier","harvester","insectrist","miller","potter","smith","stonemason","weaver"],
+	"influence": ["deceiver","orator","persuader"],
+	"skills": ["fighter","healer","hunter","instructor","pathfinder","scout","survivalist","weather watcher"]
+}

@@ -1,0 +1,50 @@
+[
+	{
+		"name": "Barkstone",
+		"description": "A busy working-class town.",
+		"traits": ["steady paw"],
+		"skills": ["carpenter", "potter", "glazier"]
+	},
+	{
+		"name": "Copperwood",
+		"description": "One of the oldest cities and home to one of the two mines in the Territories.",
+		"traits": ["independent"],
+		"skills": ["smith", "haggler"]
+	},
+	{
+		"name": "Elmoss",
+		"description": "A once prosperous city, known for its medicinal moss.",
+		"traits": ["alert"],
+		"skills": ["carpenter", "harvester"]
+	},
+	{
+		"name": "Ivydale",
+		"description": "Renowned for its bakers and bread.",
+		"traits": ["hard worker"],
+		"skills": ["harvester", "baker"]
+	},
+	{
+		"name": "Lockhaven",
+		"description": "The home of the Mouse Guard.",
+		"traits": ["generous", "guard's honor"],
+		"skills": ["weaver", "armorer"]
+	},
+	{
+		"name": "Port Sumac",
+		"description": "A busy little port town between Darkwater and Rustleaf.",
+		"traits": ["tough", "weather sense"],
+		"skills": ["boatcrafter", "weather watcher"]
+	},
+	{
+		"name": "Shaleburrow",
+		"description": "A simple town known for its delicious drinks!",
+		"traits": ["open-minded"],
+		"skills": ["mason", "harvester", "miller"]
+	},
+	{
+		"name": "Sprucetuck",
+		"description": "Known for its scientists, medicine and scent concoctions",
+		"traits": ["inquisitive", "rational"],
+		"skills": ["scientist", "loremouse"]
+	}
+]

@@ -1,0 +1,73 @@
+[
+	{
+		"description": "Is your mouse gregarious? Does he have lots of friends? Does he make friends easily?",
+		"modifiers": [ {
+			"value": 1,
+			"restrict_traits": ["bitter", "jaded"]
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	},
+	{
+		"description": "Do you have strong ties to the Guard? Perhaps a family tradition or allies within the Guard?",
+		"modifiers": [ {
+			"value": 1,
+			"parent_requirements": ["parent-guard"],
+			"restrict_traits": null
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	},
+	{
+		"description": "Has your character accomplished some great task in the Guard? Does he already have a reputation?",
+		"modifiers": [ {
+			"value": 1,
+			"requirements": [],
+			"restrict_traits": null
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	},
+	{
+		"description": "Does your character have powerful enemies in the Territories?",
+		"modifiers": [ {
+			"value": -1,
+			"requirements": [],
+			"restrict_traits": null
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	},
+	{
+		"description": "Has your character been convicted of a crime?",
+		"modifiers": [ {
+			"value": -1,
+			"requirements": [],
+			"restrict_traits": null
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	},
+	{
+		"description": "Is your character a loner, tough and cool?",
+		"modifiers": [ {
+			"value": -1,
+			"requirements": [],
+			"restrict_traits": ["extrovert"]
+		} , 
+		{
+			"value": 0,
+			"restrict_traits": null
+		} ]
+	}
+]

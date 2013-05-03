@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ static_url("css/default.css") }}" />
+	<link rel="stylesheet" href="{{ static_url("css/style.css") }}" />
+	<link rel="shortcut icon" href="{{ static_url("img/_favicon.ico") }}">
+	<link rel="apple-touch-icon" href="{{ static_url("img/_sb_apple_touch_icon.png") }}">
+
+{% end %}
+
+{% block first_load_scripts %}
+	<script data-main="/static/js/main" src="{{ static_url("js/libs/require-jquery.js") }}"
+	<script type="text/javascript">
+		var environment = {
+			page: '{{ page_heading }}'
+		};
+	</script>
+
+{% end %}
+
+{% block header %}
+	<header>
+		<h1>Header</h1>
+	</header>
+{% end %}
+
+{% block body %}
+<!-- page goes here -->
+	<p>This is the "page" page, and you passed in {{ page }}</p>
+
+{% end %}
+
+{% block last_load %}
+
+{% end %}

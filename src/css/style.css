@@ -1,0 +1,193 @@
+/* 
+			  _____                    _____          
+			 /\    \                  /\    \         
+			/::\    \                /::\    \        
+		   /::::\    \              /::::\    \       
+		  /::::::\    \            /::::::\    \      
+		 /:::/\:::\    \          /:::/\:::\    \     
+		/:::/__\:::\    \        /:::/__\:::\    \    
+		\:::\   \:::\    \      /::::\   \:::\    \   
+	  ___\:::\   \:::\    \    /::::::\   \:::\    \  
+	 /\   \:::\   \:::\    \  /:::/\:::\   \:::\ ___\ 
+	/::\   \:::\   \:::\____\/:::/__\:::\   \:::|    |
+	\:::\   \:::\   \::/    /\:::\   \:::\  /:::|____|
+	 \:::\   \:::\   \/____/  \:::\   \:::\/:::/    / 
+      \:::\   \:::\    \       \:::\   \::::::/    /  
+	   \:::\   \:::\____\       \:::\   \::::/    /   
+		\:::\  /:::/    /        \:::\  /:::/    /    
+		 \:::\/:::/    /          \:::\/:::/    /     
+		  \::::::/    /            \::::::/    /      
+		   \::::/    /              \::::/    /       
+			\::/    /                \::/____/        
+			 \/____/                  ~~              
+					 Socialbomb, inc.
+				 Since naughtical times
+				 
+				Author: Axel Esquite
+				Date: Tues October 18, 2011
+
+				colors: 
+				brown : #eef2dc
+					#D2D6BE
+				blue : #25AACC
+				dark blue : #0a3e4c
+				red/orang: #e7622e
+					dark: #B8471B
+					darker: #A53C00
+				green: #5ECFBA
+						#80CCB9
+*/
+body {
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	background: #eef2dc;
+	color: #333333;
+	/*width: 520px;*/
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+}
+#container { }
+#main {
+	
+}
+header {
+	background: #25AACC;
+	padding: 20px;
+	margin-bottom: 40px;
+}
+	header h1 {
+		font-family: 'Cherry Swash', cursive;
+		text-align: center;
+		color: #0a3e4c;
+		font-size: 45px;
+		line-height: 1em;
+		text-shadow: -1px 1px 0px #33bee2;
+		filter: dropshadow(color=#f5f5f5, offx=-1, offy=0);
+	}
+	header h4 {
+		font-family: 'Cherry Swash', cursive;
+		text-align: center;
+		font-size: 25px;
+		color: #eef2dc;
+		/*text-shadow: -1px 1px 0px #33bee2;*/
+		/*filter: dropshadow(color=#f5f5f5, offx=-1, offy=0);*/
+	}
+button.create {
+	font-family: 'Cherry Swash', cursive;
+	background-color: #80CCB9;
+	color: #447f70;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 30px;
+	display: block;
+	margin: 0 auto 40px;
+	text-shadow: 2px 2px 3px rgba(146,232,211,.8);
+	border: solid 5px #D2D6BE;
+	-webkit-transition-property: background-color,1s,linear;
+	-moz-transition-property: background-color,1s,linear;
+	-ms-transition-property: background-color,1s,linear;
+	-o-transition-property: background-color,1s,linear;
+	transition-property: background-color,1s,linear;
+	-webkit-transition-duration: 0.15s;
+	-moz-transition-duration: 0.15s;
+	-ms-transition-duration: 0.15s;
+	-o-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	-webkit-transition-delay: 0;
+	-moz-transition-delay: 0;
+	-ms-transition-delay: 0;
+	-o-transition-delay: 0;
+	transition-delay: 0;
+	-webkit-transition-property: color,1s,linear;
+	-moz-transition-property: color,1s,linear;
+	-ms-transition-property: color,1s,linear;
+	-o-transition-property: color,1s,linear;
+	transition-property: color,1s,linear;
+	-webkit-transition-duration: 0.15s;
+	-moz-transition-duration: 0.15s;
+	-ms-transition-duration: 0.15s;
+	-o-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: ease-out;
+	-moz-transition-timing-function: ease-out;
+	-ms-transition-timing-function: ease-out;
+	-o-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	-webkit-transition-delay: 0;
+	-moz-transition-delay: 0;
+	-ms-transition-delay: 0;
+	-o-transition-delay: 0;
+	transition-delay: 0;
+}
+
+button.create:hover {
+	background-color:#6eb4a4;
+	text-shadow: 2px 2px 3px rgba(146,232,211,.1);
+	/*border: solid 5px #d9ddc3;*/
+}
+
+.mouse {
+	float: left;
+	background-color: #fff;
+	overflow: hidden;
+	margin: 0 20px 20px 20px;
+	border-radius: 10px 10px 0px 0px;
+}
+	.mouse header {
+		font-family: 'Cherry Swash', cursive;
+		text-align: center;
+		/*width: 420px;*/
+		/*background-color: #eeeccc;*/
+		background-color:#e7622e;
+		border-radius: 10px 10px 0px 0px;
+		padding: 10px 20px 5px 20px;
+		margin: 0;
+	}
+		.mouse header strong {
+			display: block;
+			font-size: 35px;
+			line-height: 1em;
+			color: #A53C00;
+			text-shadow: 2px 2px 3px rgba(252,121,45,.8);
+		}
+		.mouse header em { display: block; color: #eef2dc; }
+	.mouse img {
+		float: left;
+		display: block;
+		margin: 14px 0 0 10px;
+		width: 120px;
+	}
+	.mouse dl{
+		float: left;
+		min-width: 140px;
+		background-color: #fff;
+		overflow: hidden;
+		padding: 10px 20px;
+		margin: 0;
+	}
+		.mouse dl strong {
+			font-family: 'Cherry Swash', cursive;
+		}
+		.mouse dl dt {
+			float: left;
+		}
+		.mouse dl dd {
+			font-family: 'Quicksand', sans-serif;
+			text-align: right;
+		}
+		.edit {display: none;}
+		.editing label {
+			display: none;
+		}
+		.editing .edit {
+			display: block;
+			padding: 5px 0 5px 20px;
+			margin: 0 0 0 100px;
+		}
+		.view {cursor: default;}

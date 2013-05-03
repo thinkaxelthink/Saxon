@@ -1,0 +1,5 @@
+<div class="some">
+	<h1><a href="/some/{{ some.id }}">{{ escape(some.slug) }}</a></h1>
+	<div>{{ escape(some.name) }}</div>
+	<div>{{ locale.format_date(some.timestamp, full_format=False, shorter=False) }}</div>
+</div>

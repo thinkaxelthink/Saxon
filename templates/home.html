@@ -1,0 +1,119 @@
+{% extends "main.html" %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ static_url("css/default.css") }}" />
+	<link rel="stylesheet" href="{{ static_url("css/style.css") }}" />
+	<link rel="shortcut icon" href="{{ static_url("img/_favicon.ico") }}">
+	<link rel="apple-touch-icon" href="{{ static_url("img/_sb_apple_touch_icon.png") }}">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
+
+
+{% end %}
+
+{% block first_load_scripts %}
+	<script data-main="/static/js/main" src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js"></script>
+	<script type="text/javascript">
+		var environment = {
+			page: '{{ page_heading }}'
+		};
+	</script>
+
+{% end %}
+
+{% block header %}
+<header>
+		<h1>Mouse Guard</h1>
+		<h4>Character Generator</h4>
+</header>
+{% end %}
+
+{% block body %}
+<div id="main" role="main">
+	<button class="create">Create New Mouse</button>
+	<section id="mice-list"></section>
+</div>
+{% end %}
+
+{% block footer %}
+<footer>
+</footer>
+{% end %}
+
+{% block last_load %}
+<script type="text/template" id="mouse-item-template">
+	<header>
+		<strong><%- rank.title %></strong>
+		<em><%- name %>, <%- age %> From <%- hometown.name %></em>
+	</header>
+	<img src="/static/img/mouse1.png" title="<%- name %>">
+	<dl>
+		<dt><strong>Nature:</strong></dt>
+		<dd class="view">
+			<label><%- nature %></label>
+			<input class="edit" type="text" value="<%- nature %>">
+		</dd>
+		<dt><strong>Will:</strong></dt>
+		<dd class="view">
+			<label><%- will %></label>
+			<input class="edit" type="text" value="<%- will %>">
+		</dd>
+		<dt><strong>Health:</strong></dt>
+		<dd class="view">
+			<label><%- health %></label>
+			<input class="edit" type="text" value="<%- health %>">
+		</dd>
+		<dt><strong>Resources:</strong></dt>
+		<dd class="view">
+			<label><%- resources %></label>
+			<input class="edit" type="text" value="<%- resources %>">
+		</dd>
+		<dt><strong>Circles:</strong></dt>
+		<dd class="view">
+			<label><%- circles %></label>
+			<input class="edit" type="text" value="<%- circles %>">
+		</dd>
+		<dt><strong>Fur:</strong></dt> 
+		<dd class="view">
+			<label><%- fur_color %></label>
+			<input class="edit" type="text" value="<%- fur_color %>">
+		</dd>
+		<dt><strong>Cloak:</strong></dt>
+		<dd class="view">
+			<label><%- cloak_color %></label>
+			<input class="edit" type="text" value="<%- cloak_color %>">
+		</dd>
+		<dt><strong>Gear:</strong></dt>
+		<dd class="view">
+			<label><%- gear %></label>
+			<input class="edit" type="text" value="<%- gear %>">
+		</dd>
+	</dl>
+	<dl>
+		<dt><strong>Parents:</strong></dt>
+		<dd class="view">n/a</dd>
+		<dt><strong>Friend:</strong></dt>
+		<dd class="view"><%- friend %></dd>
+		<dt><strong>Enemy:</strong></dt>
+		<dd class="view"><%- enemy %></dd>
+		<dt><strong>Belief:</strong></dt>
+		<dd class="view">...</dd>
+		<dt><strong>Goal:</strong></dt>
+		<dd class="view">...</dd>
+		<dt><strong>Instinct:</strong></dt> 
+		<dd class="view">...</dd>
+		<dt><strong>Contacts:</strong></dt>
+		<dd class="view">...</dd>
+	</dl>
+	<dl>
+		<dt><strong>Skills:</strong></dt>
+		<dd class="view">n/a</dd>
+		<dt><strong>Traits:</strong></dt>
+		<dd class="view">n/a</dd>
+	</dl>
+</script>
+<script type="text/template" id="stats-template">
+	// <div class="mice-count"><b><%= remaining %></b> <%= remaining == 1 ? 'mouse' : 'mice' %> created</div>
+</script>
+{% end %}

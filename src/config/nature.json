@@ -1,0 +1,35 @@
+{
+	"saves": {
+		"description": "Do you save for winter even if it means going without something now? Or do you use what you have when you need it?",
+		"modifiers": [ {
+			"value": 0,
+			"restrict_traits": null
+		},
+		{
+			"value": 1,
+			"restrict_traits": ["bold", "generous"]
+		} ]
+	},
+	"confrontational": {
+		"description": "When confronted, do you stand your ground and fight or do you run and hide?",
+		"modifiers": [ {
+				"value":0,
+				"restrict_skill": null
+			},
+			{
+				"value": 1,
+				"restrict_skill": [{"fighter": -1}]
+			} ]
+	},
+	"fear": { 
+		"description": "Do you fear owls, weasels and wolves?",
+		"modifiers" :[ {
+				"value": 0,
+				"restrict_traits": null
+			},
+			{
+				"value": 1,
+				"restrict_traits": ["fearless"]
+			} ]
+	}
+}

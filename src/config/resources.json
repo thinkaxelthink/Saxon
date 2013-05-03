@@ -1,0 +1,62 @@
+[
+	{
+		"description": "In winter, do you still practice a trade like weaving, smithing or potter for the Guard?",
+		"modifiers": [ {
+			"value": 1,
+			"requirements": ["weaving", "smithing", "potter"],
+			"restrict_traits": ["leader"]
+		} , 
+		{
+			"value": 0
+		} ]
+	},
+	{
+		"description": "Are your parents smiths, politicians, merchants or apiarists?",
+		"modifiers": [ {
+			"value": 1,
+			"parent_requirements": ["smiths", "politicians", "merchants", "apiarists"],
+			"restrict_traits": ["parent-guard"]
+		} , 
+		{
+			"value": 0
+		} ]
+	},
+	{
+		"description": "Do you like to buy gifts for yourself and your friends?",
+		"modifiers": [ {
+			"value": -1
+		} , 
+		{
+			"value": 0
+		} ]
+	},
+	{
+		"description": "Are you thrifty?",
+		"modifiers": [ {
+			"value": 1,
+			"restrict_traits": ["generous"]
+		} , 
+		{
+			"value": 0
+		} ]
+	},
+	{
+		"description": "Have you ever been in debt? Or are you generally bad with money?",
+		"modifiers": [ {
+			"value": -1
+		} , 
+		{
+			"value": 0
+		} ]
+	},
+	{
+		"description": "Do you always pack carefully for a journey, ensuring you have everything you need?",
+		"modifiers": [ {
+			"value": 1,
+			"restrict_traits": ["bold", "fiery"]
+		} , 
+		{
+			"value": 0
+		} ]
+	}
+]
