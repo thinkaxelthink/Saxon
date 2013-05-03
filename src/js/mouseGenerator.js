@@ -226,7 +226,7 @@ function onJsonPluginLoaded ( r , Events , JsonLoader, NumberUtils ) {
 
 			// gear me, bitch
 			randomMouse.gear = [ configRules.gear.weapons[ NumberUtils.randomIntegerWithinRange(0,configRules.gear.weapons.length-1) ] ];
-			log('gear',  configRules.gear.weapons[ NumberUtils.randomIntegerWithinRange(0,configRules.gear.weapons.length-1) ] );
+			
 			// TODO:: generate colors or something
 			randomMouse.cloak_color = 'green';
 

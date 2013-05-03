@@ -49,69 +49,16 @@
 	</header>
 	<img src="/static/img/mouse1.png" title="<%- name %>">
 	<dl>
-		<dt><strong>Nature:</strong></dt>
-		<dd class="view">
-			<label><%- nature %></label>
-			<input class="edit" type="text" value="<%- nature %>">
-		</dd>
-		<dt><strong>Will:</strong></dt>
-		<dd class="view">
-			<label><%- will %></label>
-			<input class="edit" type="text" value="<%- will %>">
-		</dd>
-		<dt><strong>Health:</strong></dt>
-		<dd class="view">
-			<label><%- health %></label>
-			<input class="edit" type="text" value="<%- health %>">
-		</dd>
-		<dt><strong>Resources:</strong></dt>
-		<dd class="view">
-			<label><%- resources %></label>
-			<input class="edit" type="text" value="<%- resources %>">
-		</dd>
-		<dt><strong>Circles:</strong></dt>
-		<dd class="view">
-			<label><%- circles %></label>
-			<input class="edit" type="text" value="<%- circles %>">
-		</dd>
-		<dt><strong>Fur:</strong></dt> 
-		<dd class="view">
-			<label><%- fur_color %></label>
-			<input class="edit" type="text" value="<%- fur_color %>">
-		</dd>
-		<dt><strong>Cloak:</strong></dt>
-		<dd class="view">
-			<label><%- cloak_color %></label>
-			<input class="edit" type="text" value="<%- cloak_color %>">
-		</dd>
-		<dt><strong>Gear:</strong></dt>
-		<dd class="view">
-			<label><%- gear %></label>
-			<input class="edit" type="text" value="<%- gear %>">
-		</dd>
-	</dl>
-	<dl>
-		<dt><strong>Parents:</strong></dt>
-		<dd class="view">n/a</dd>
-		<dt><strong>Friend:</strong></dt>
-		<dd class="view"><%- friend %></dd>
-		<dt><strong>Enemy:</strong></dt>
-		<dd class="view"><%- enemy %></dd>
-		<dt><strong>Belief:</strong></dt>
-		<dd class="view">...</dd>
-		<dt><strong>Goal:</strong></dt>
-		<dd class="view">...</dd>
-		<dt><strong>Instinct:</strong></dt> 
-		<dd class="view">...</dd>
-		<dt><strong>Contacts:</strong></dt>
-		<dd class="view">...</dd>
-	</dl>
-	<dl>
-		<dt><strong>Skills:</strong></dt>
-		<dd class="view">n/a</dd>
-		<dt><strong>Traits:</strong></dt>
-		<dd class="view">n/a</dd>
-	</dl>
+	<% for (var item in this.model.attributes){ %>
+			<% if (typeof this.model.attributes !== 'Object' ) { %>
+				<dt><strong><% item %>:</strong></dt>
+				<dd class="view">
+					<label><%- this.model.attributes[item] %></label>
+					<input class="edit" type="text" value="<%- this.model.attributes[item] %>">
+				</dd>
+			<% }else{ %>
+			<% }%>
+	<% } %>
 </script>
 <script type="text/template" id="stats-template">
 	// <div class="mice-count"><b><%= remaining %></b> <%= remaining == 1 ? 'mouse' : 'mice' %> created</div>
