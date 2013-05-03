@@ -23,7 +23,7 @@ import httplib
 # import and define tornado-y things
 from tornado.options import define, options
 define("port", default=8888, help="run on the given port", type=int)
-define("ga_tracker", default='UA-40657708-2', help="tracker id for google analytics")
+define("ga_tracker", default='UA-40657708-1', help="tracker id for google analytics")
 
 # enable logging
 if (debug == True):
