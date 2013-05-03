@@ -23,6 +23,7 @@ import httplib
 # import and define tornado-y things
 from tornado.options import define, options
 define("port", default=8888, help="run on the given port", type=int)
+define("ga_tracker", default='UA-40657708-2', help="tracker id for google analytics")
 
 # enable logging
 if (debug == True):
@@ -65,7 +66,8 @@ class HomeHandler(BaseHandler):
 		self.render(
 			"home.html", 
 			page_title='Home',
-			page_heading='home'
+			page_heading='home',
+			ga_tracker=options.ga_tracker
 		)
 
 
