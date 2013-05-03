@@ -14,3 +14,5 @@ Icon
 # heroku deployment files
 heroku.sh
 init.sh
+Procfile
+requirements.txt
