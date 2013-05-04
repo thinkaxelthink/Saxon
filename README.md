@@ -1,6 +1,6 @@
 #SaxonJS
 
-A RPG character generator for __Mouse Guard__. For the DM who doesn't feel like spending a whole afternoon with friends eating pizza, drinking beer, and going through a book building characters. One button click will generate a mouse randomly so everyone can dive in and start playing.
+A RPG character generator for [Mouse Guard](http://www.mouseguard.net/books/role-playing-game/). For the DM who doesn't feel like spending a whole afternoon with friends eating pizza, drinking beer, and going through a book building characters. One button click will generate a mouse randomly so everyone can dive in and start playing.
 
 ----
 ## Running Saxon Locally
@@ -17,3 +17,5 @@ You can go with [Tornado](http://www.tornadoweb.org/en/stable/) in which case yo
 I've been using [Heroku](https://www.heroku.com/) to deploy to the world. You can see it [here](http://thawing-dusk-9851.herokuapp.com).
 
 For more info on how to deploy a Tornado app on Heroku, [go here](https://github.com/mikedory/Tornado-Heroku-Quickstart).
+
+Curious about the Mouse Guard RPG? [Check this out](http://www.burningwheel.org/forum/forumdisplay.php?41-Mouse-Guard-RPG)
