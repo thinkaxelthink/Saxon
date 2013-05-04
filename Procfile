@@ -1,1 +1,1 @@
-web: python main.py --port=$PORT
+web: python main.py --ga_tracker="UA-40657708-1" --port=$PORT

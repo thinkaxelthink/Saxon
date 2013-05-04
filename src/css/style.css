@@ -222,12 +222,15 @@ button.create:hover {
 		.mouse:hover .destroy {
 			display: block;
 		}
-	.mouse img {
+	.mouse-pic {
 		float: left;
 		display: block;
 		margin: 14px 0 0 10px;
-		width: 120px;
 	}
+		.mouse-pic h2 {
+			font-family: 'Cherry Swash', cursive;
+			font-size: 18px;
+		}
 	.mouse dl{
 		float: left;
 		min-width: 140px;

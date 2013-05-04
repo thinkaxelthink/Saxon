@@ -55,20 +55,21 @@ function onJsonPluginLoaded ( r , Events , JsonLoader, NumberUtils ) {
 
 	return {
 		generate: function() {
-			var randomMouse = {},item;
+			var randomMouse = {},item,genders=['male', 'female'],furs=['brown', 'blonde', 'gray', 'black', 'red'];
 			// pick gender
-			var mouseGender = ['male', 'female'][NumberUtils.randomIntegerWithinRange(0,1)],
-			enemyGender = ['male', 'female'][NumberUtils.randomIntegerWithinRange(0,1)],
-			seniorGender = ['male', 'female'][NumberUtils.randomIntegerWithinRange(0,1)],
-			mentorGender = ['male', 'female'][NumberUtils.randomIntegerWithinRange(0,1)],
-			friendGender = ['male', 'female'][NumberUtils.randomIntegerWithinRange(0,1)],
-			mouseFur = ['brown', 'blonde', 'gray', 'black', 'red'][NumberUtils.randomIntegerWithinRange(0,4)];
+			var mouseGender = genders[NumberUtils.randomIntegerWithinRange(0,1)],
+			enemyGender		= genders[NumberUtils.randomIntegerWithinRange(0,1)],
+			seniorGender	= genders[NumberUtils.randomIntegerWithinRange(0,1)],
+			mentorGender	= genders[NumberUtils.randomIntegerWithinRange(0,1)],
+			friendGender	= genders[NumberUtils.randomIntegerWithinRange(0,1)],
+			mouseFur		= furs[NumberUtils.randomIntegerWithinRange(0,4)];
 			// pick a rank
 			var rankIndex = NumberUtils.randomIntegerWithinRange(0,configRules.ranks.length-1);
 			_.extend( randomMouse , configRules.mouse, 
 				{rank: configRules.ranks[rankIndex]},
 				{age: NumberUtils.randomIntegerWithinRange(configRules.ranks[rankIndex].min_age , configRules.ranks[rankIndex].max_age) },
 				{name: configRules.names[mouseGender][NumberUtils.randomIntegerWithinRange(0,configRules.names[mouseGender].length-1)]},
+				{parents: [configRules.names['male'][NumberUtils.randomIntegerWithinRange(0,configRules.names[mouseGender].length-1)], configRules.names[mouseGender][NumberUtils.randomIntegerWithinRange(0,configRules.names['female'].length-1)]]},
 				{gender: mouseGender},
 				{will: configRules.ranks[rankIndex].will },
 				{health: configRules.ranks[rankIndex].health },
@@ -147,6 +148,7 @@ function onJsonPluginLoaded ( r , Events , JsonLoader, NumberUtils ) {
 				else if( typeof element.modifiers[i].parent_requirements !== 'undefined'
 					&& element.modifiers[i].parent_requirements.length >= 1 )
 				{
+					log('we have parent skills');
 					// TODO: Make parents skills below
 					// randomMouse.parents.skills.push( element.modifiers[i].requirements[
 					// 	NumberUtils.randomIntegerWithinRange(0,element.modifiers[i].requirements.length-1)

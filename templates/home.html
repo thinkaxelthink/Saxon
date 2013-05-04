@@ -31,7 +31,7 @@
 
 {% block body %}
 <div id="main" role="main">
-	<button class="create">Create New Mouse</button>
+	<button class="create">Make Me a Mouse</button>
 	<section id="mice-list"></section>
 </div>
 {% end %}
@@ -47,14 +47,17 @@
 	<header>
 		<a class="destroy">X</a>
 		<strong><%- rank %></strong>
-		<em><%- name %>, <%- age %> From <%- hometown %></em>
+		<em><%- age %> From <%- hometown %></em>
 	</header>
-	<img src="/static/img/mouse1.png" title="<%- name %>">
+	<div class="mouse-pic">
+		<img src="/static/img/mouse1.png" title="<%- name %>" width="120" height="120">
+		<h2><%- name %></h2>
+	</div>
 	<dl>
 	<% for (var item in this.model.attributes){ %>
-			<% if( item === 'traits' || item === 'nature' || item === 'belief' ) { %>
+	<% if( item === 'traits' || item === 'nature' || item === 'belief' ) { %>
 	</dl><dl>
-			<% } %>
+	<% } %>
 			<% if ( _.isArray( this.model.attributes[item] ) === true ) { %>
 				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
 				<% _.each(this.model.attributes[item], function(e){ %>
@@ -73,7 +76,7 @@
 				<% }); %>
 			<% }else{ %>
 				<% if( item !== 'id' && item !== 'hometown' 
-					&& item !== 'rank'&& item !== 'age' ) { %>
+					&& item !== 'rank' && item !== 'age' && item !== 'name') { %>
 				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
 				<dd class="view">
 					<label><%- this.model.attributes[item] %></label>
