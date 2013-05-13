@@ -54,6 +54,7 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 			template: _.template($('#mouse-item-template').html()),
 			events: {
 				'dblclick .view': 'edit',
+				"blur .edit": "close"
 			},
 			initialize: function() {
 				this.listenTo(this.model, 'change', this.render);
@@ -68,9 +69,37 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 				return this;
 			},
 			edit: function (e) {
-				log('editing', e, this );
+				// log('editing', e, this );
 				$(e.currentTarget).addClass("editing");
 				$(e.currentTarget).find('input').focus();
+			},
+			close: function (e) {
+				// $(e.currentTarget).removeClass("editing");
+				// $(e.currentTarget).find('input').focus();
+				// var value = this.input.val();
+				var value = this.$el.find('.editing input').val();
+				var prop = $(e.currentTarget).parent()
+					.prev()
+						.find('strong')
+						.text()
+						.replace(/:/, '')
+						.toLowerCase();
+				var o = {};
+
+				if (!value) {
+					// this.clear();
+					this.$el.find('.editing').removeClass("editing");
+				} else {
+					if (!prop)
+					{
+						o[prop] = value;
+						this.model.save(o);
+					}
+					this.$el.find('.editing')
+						.find('label')
+						.text(value)
+					.end().removeClass("editing");
+				}
 			}
 		});
 
