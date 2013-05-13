@@ -69,8 +69,8 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 			},
 			edit: function (e) {
 				log('editing', e, this );
-				// $(e.currentTarget).addClass("editing");
-				// $(e.currentTarget).find('input').focus();
+				$(e.currentTarget).addClass("editing");
+				$(e.currentTarget).find('input').focus();
 			}
 		});
 

@@ -6,7 +6,6 @@
 	<link rel="shortcut icon" href="{{ static_url("img/_favicon.ico") }}">
 	<link rel="apple-touch-icon" href="{{ static_url("img/_sb_apple_touch_icon.png") }}">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-
 	<link href='http://fonts.googleapis.com/css?family=Cherry+Swash:400,700' rel='stylesheet' type='text/css'>
 
 
@@ -24,8 +23,8 @@
 
 {% block header %}
 <header>
-		<h1>Saxon</h1>
-		<h4>A Mouse Guard Character Generator</h4>
+	<h1>Saxon</h1>
+	<h4>A Mouse Guard Character Generator</h4>
 </header>
 {% end %}
 
@@ -45,45 +44,45 @@
 {% block last_load %}
 <script type="text/template" id="mouse-item-template">
 	<header>
-		<a class="destroy">X</a>
 		<strong><%- rank %></strong>
-		<em><%- age %> From <%- hometown %></em>
+		<a class="destroy">X</a>
 	</header>
 	<div class="mouse-pic">
 		<img src="/static/img/mouse1.png" title="<%- name %>" width="120" height="120">
-		<h2><%- name %></h2>
+		<h2><%- name %>, <em><%- age %></em></h2>
+		<em>From <%- hometown %></em>
 	</div>
 	<dl>
 	<% for (var item in this.model.attributes){ %>
-	<% if( item === 'traits' || item === 'nature' || item === 'belief' ) { %>
+		<% if( item === 'traits' || item === 'nature' || item === 'belief' ) { %>
 	</dl><dl>
-	<% } %>
-			<% if ( _.isArray( this.model.attributes[item] ) === true ) { %>
-				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
-				<% _.each(this.model.attributes[item], function(e){ %>
-					<dd class="view">
-						<label><%= e %></label>
-						<input class="edit" type="text" value="<%- e %>">
-					</dd>
-				<% }); %>
-			<% } else if ( _.isObject( this.model.attributes[item] ) === true ) { %>
-				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
-				<% _.each(_.pairs(this.model.attributes[item]), function(e){ %>
-					<dd class="view">
-						<label><%= e[0] %>  <%= e[1] %></label>
-						<input class="edit" type="text" value="<%- e[1] %>">
-					</dd>
-				<% }); %>
-			<% }else{ %>
-				<% if( item !== 'id' && item !== 'hometown' 
-					&& item !== 'rank' && item !== 'age' && item !== 'name') { %>
-				<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
-				<dd class="view">
-					<label><%- this.model.attributes[item] %></label>
-					<input class="edit" type="text" value="<%- this.model.attributes[item] %>">
+		<% } %>
+		<% if ( _.isArray( this.model.attributes[item] ) === true ) { %>
+			<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
+			<% _.each(this.model.attributes[item], function(e){ %>
+				<dd class="">
+					<label><%= e %></label>
+					<!-- <input class="edit" type="text" value="<%- e %>"> -->
 				</dd>
-				<% } %>
+			<% }); %>
+		<% } else if ( _.isObject( this.model.attributes[item] ) === true ) { %>
+			<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
+			<% _.each(_.pairs(this.model.attributes[item]), function(e){ %>
+				<dd class="">
+					<label><%= e[0] %>  <%= e[1] %></label>
+					<!-- <input class="edit" type="text" value="<%- e[1] %>"> -->
+				</dd>
+			<% }); %>
+		<% }else{ %>
+			<% if( item !== 'id' && item !== 'hometown' 
+				&& item !== 'rank' && item !== 'age' && item !== 'name') { %>
+			<dt><strong><%= _.chain(item).capitalize().spacelize().value() %>:</strong></dt>
+			<dd <% if ( item === 'belief' || item === 'instinct' || item === 'goal' || item === 'contacts' ) { %> class="view" <% } %> >
+				<label><%- this.model.attributes[item] %></label>
+				<input class="edit" type="text" value="<%- this.model.attributes[item] %>">
+			</dd>
 			<% } %>
+		<% } %>
 	<% } %>
 	</dl>
 </script>
