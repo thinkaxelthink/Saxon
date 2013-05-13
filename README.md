@@ -14,7 +14,7 @@ All of the logic for generating a character is done client-side. So once you've 
 ## Deploy to a server
 You can go with [Tornado](http://www.tornadoweb.org/en/stable/) in which case you'll need a UNIX-like system with a version of Python in the 2.x series installed. Python package requirements are specified in a pip-compatible `requirements.txt`, located in this repository. But you can do this anyway you want, really. You might have to do a little copy/paste to get the templates out and into your setup.
 
-I've been using [Heroku](https://www.heroku.com/) to deploy to the world. You can see it [here](http://thawing-dusk-9851.herokuapp.com).
+I've been using [Heroku](https://www.heroku.com/) to deploy to the world. You can see it [here](http://saxonjs.herokuapp.com).
 
 For more info on how to deploy a Tornado app on Heroku, [go here](https://github.com/mikedory/Tornado-Heroku-Quickstart).
 
