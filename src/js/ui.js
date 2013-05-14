@@ -54,6 +54,7 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 			template: _.template($('#mouse-item-template').html()),
 			events: {
 				'dblclick .view': 'edit',
+				"click a.destroy" : "clear",
 				"blur .edit": "close"
 			},
 			initialize: function() {
@@ -100,6 +101,9 @@ define(['jquery', 'libs/events', 'mouseGenerator', 'backbone', 'localStorage'], 
 						.text(value)
 					.end().removeClass("editing");
 				}
+			},
+			clear: function () {
+				this.model.destroy();
 			}
 		});
 
